@@ -17,7 +17,7 @@ A simple web application to help you calculate the potential return on investmen
 
 1. Clone the repository:
    ```bash
-   git clone [<repository-url>](https://github.com/manuelalferez/amortify.git)
+   git clone https://github.com/manuelalferez/amortify.git
    ```
 2. Install dependencies
    ```bash
