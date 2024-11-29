@@ -13,7 +13,7 @@ export default function Navbar() {
             "https://ik.imagekit.io/manuelalferez/amortify/500euro_aWx_AoowW.webp",
         }}
       >
-        <button className="flex gap-1"> amortify</button>
+        <button className="flex gap-1">amortify</button>
       </CoolMode>
     </div>
   );
