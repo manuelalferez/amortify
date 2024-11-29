@@ -20,7 +20,10 @@ export default function Footer() {
         <p className="font-bold">
           amortify
           <br />
-          Created by Manuel Alférez
+          Created by{" "}
+          <a href="https://www.manuelalferez.com/" target="_blank">
+            Manuel Alférez
+          </a>
         </p>
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </aside>
