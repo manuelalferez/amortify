@@ -1,13 +1,51 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 export default function Calculator() {
-  const [propertyPrice, setPropertyPrice] = useState(77000);
-  const [annualRentalIncome, setAnnualRentalIncome] = useState(15000);
-  const [loanInterestRate, setLoanInterestRate] = useState(4);
-  const [additionalCosts, setAdditionalCosts] = useState(1000);
-  const [loanTerm, setLoanTerm] = useState(20);
+  const [propertyPrice, setPropertyPrice] = useState<number>(77000);
+  const [annualRentalIncome, setAnnualRentalIncome] = useState<number>(15000);
+  const [loanInterestRate, setLoanInterestRate] = useState<number>(4);
+  const [additionalCosts, setAdditionalCosts] = useState<number>(1000);
+  const [loanTerm, setLoanTerm] = useState<number>(20);
+
+  useEffect(() => {
+    const propertyPrice = Cookies.get("propertyPrice");
+    if (propertyPrice) setPropertyPrice(parseInt(propertyPrice));
+
+    const annualRentalIncome = Cookies.get("annualRentalIncome");
+    if (annualRentalIncome) setAnnualRentalIncome(parseInt(annualRentalIncome));
+
+    const loanInterestRate = Cookies.get("loanInterestRate");
+    if (loanInterestRate) setLoanInterestRate(parseFloat(loanInterestRate));
+
+    const additionalCosts = Cookies.get("additionalCosts");
+    if (additionalCosts) setAdditionalCosts(parseInt(additionalCosts));
+
+    const loanTerm = Cookies.get("loanTerm");
+    if (loanTerm) setLoanTerm(parseInt(loanTerm));
+  }, []);
+
+  useEffect(() => {
+    Cookies.set("propertyPrice", propertyPrice.toString());
+  }, [propertyPrice]);
+
+  useEffect(() => {
+    Cookies.set("annualRentalIncome", annualRentalIncome.toString());
+  }, [annualRentalIncome]);
+
+  useEffect(() => {
+    Cookies.set("loanInterestRate", loanInterestRate.toString());
+  }, [loanInterestRate]);
+
+  useEffect(() => {
+    Cookies.set("additionalCosts", additionalCosts.toString());
+  }, [additionalCosts]);
+
+  useEffect(() => {
+    Cookies.set("loanTerm", loanTerm.toString());
+  }, [loanTerm]);
 
   const formatNumber = (value: number) => {
     return new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(
@@ -83,7 +121,7 @@ export default function Calculator() {
   };
 
   return (
-    <div className="card bg-base-100 w-11/12 shadow-xl mx-auto mb-12 md:mb-32">
+    <div className="card bg-white w-11/12 shadow-xl mx-auto mb-12 md:mb-32">
       <div className="card-body">
         <h2 className="card-title text-3xl flex justify-center mb-6">
           Calculate Your Potential Return
@@ -120,7 +158,7 @@ export default function Calculator() {
               <input
                 type="range"
                 min={0}
-                max={100000}
+                max={300000}
                 value={annualRentalIncome}
                 step={500}
                 onChange={(e) => setAnnualRentalIncome(Number(e.target.value))}
@@ -131,7 +169,7 @@ export default function Calculator() {
               </div>
             </div>
 
-            <div className="flex gap-2 justify-between">
+            <div className="flex flex-col md:flex-row gap-2 justify-between">
               <div className="mb-6">
                 <label className="block text-gray-700">Loan Term (Years)</label>
                 <p className="text-sm text-gray-500 mt-1 mb-4">
