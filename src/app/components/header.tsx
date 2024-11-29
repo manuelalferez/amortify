@@ -8,7 +8,7 @@ export default function Navbar() {
       <CoolMode
         options={{
           speedUp: 5,
-          size: 100,
+          size: 250,
           particle:
             "https://ik.imagekit.io/manuelalferez/amortify/500euro_aWx_AoowW.webp",
         }}
