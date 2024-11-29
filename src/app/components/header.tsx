@@ -4,7 +4,7 @@ import { CoolMode } from "@/components/ui/cool-mode";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-blue-500 text-extrabold text-white flex justify-center">
+    <div className="navbar bg-blue-500 text-extrabold text-xl text-white flex justify-center">
       <CoolMode
         options={{
           speedUp: 5,
@@ -13,7 +13,7 @@ export default function Navbar() {
             "https://ik.imagekit.io/manuelalferez/amortify/500euro_aWx_AoowW.webp",
         }}
       >
-        <button>
+        <button className="flex gap-1">
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
