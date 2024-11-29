@@ -5,10 +5,9 @@ import { useState } from "react";
 export default function Calculator() {
   const [propertyPrice, setPropertyPrice] = useState(77000);
   const [annualRentalIncome, setAnnualRentalIncome] = useState(15000);
-  const [loanInterestRate, setLoanInterestRate] = useState(4); // Optional
-  const [additionalCosts, setAdditionalCosts] = useState(1000); // Optional
+  const [loanInterestRate, setLoanInterestRate] = useState(4);
+  const [additionalCosts, setAdditionalCosts] = useState(1000);
 
-  // Format numbers based on the locale
   const formatNumber = (value: number) => {
     return new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(
       value

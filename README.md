@@ -2,6 +2,8 @@
 
 A simple web application to help you calculate the potential return on investment for real estate properties.
 
+![amortify](https://github.com/user-attachments/assets/7891b07a-3912-4e12-a0ad-291c2c8bdbfc)
+
 ## Features
 
 - **Property Price**: Enter the purchase price of the property.
