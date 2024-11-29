@@ -123,9 +123,14 @@ export default function Calculator() {
   return (
     <div className="card bg-white w-11/12 shadow-xl mx-auto mb-12 md:mb-32">
       <div className="card-body">
-        <h2 className="card-title text-3xl flex justify-center mb-6">
-          Calculate Your Potential Return
+        <h2 className="card-title text-3xl flex justify-center mb-0">
+          Calculator
         </h2>
+        <h3 className="text-center text-lg text-gray-500 mb-6">
+          Enter key details about your property, including the purchase price,
+          rental income, loan terms, interest rate, and additional costs to
+          estimate how much you could earn from your investment
+        </h3>
 
         <div className="flex flex-col md:flex-row gap-6">
           <div className="flex-1">

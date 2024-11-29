@@ -4,7 +4,7 @@ import { CoolMode } from "@/components/ui/cool-mode";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-blue-500 text-extrabold text-2xl text-white flex justify-center">
+    <div className="navbar bg-blue-950 font-extrabold text-2xl text-white flex justify-center">
       <CoolMode
         options={{
           speedUp: 5,

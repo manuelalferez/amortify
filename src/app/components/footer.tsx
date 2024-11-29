@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer footer-center text-white bg-blue-500 p-10">
+    <footer className="footer footer-center text-white bg-blue-950 p-10">
       <aside>
         <svg
           xmlns="http://www.w3.org/2000/svg"
